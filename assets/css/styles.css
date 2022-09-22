@@ -1,0 +1,417 @@
+@charset "UTF-8";
+
+/*==========Google Fonts - Nunito==========*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/*==========Google Fonts - Poppins==========*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*==========Root==========*/
+:root {
+    --background-color: #FFF0E5;
+    --primary-color: #3A10E5; 
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --btn-color: #5131F3;
+    --title-color: #10162F;
+    --text-color: #333;
+    --principal-font: 'Poppins';
+    --title-font: 'Nunito';
+    --font-size-text: .9rem;
+    --font-size-title: 2rem;
+    --shadow-color: #00000010;
+    --html-color: #E44D25;
+    --css-color: #1E4CE5;
+    --js-color: #F7E018;
+    --react-color: #00D8FF;
+    --angular-color: #D6002F;
+    --facebook-color: #38548F;
+    --twitter-color: #28A0D5;
+    --linkedin-color: #0A66C2;
+    --instagram-color: #B1319F;
+    --telegram-color: #2FA0D6;
+    --github-color: #000;
+    --whatsapp-color: #2BAF3E;
+    --transparent-color: rgba(0, 0, 0, 0);
+}
+
+/*==========Reset CSS==========*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/*==========Base=========*/
+body {
+    background: var(--background-color);
+    font-family: var(--principal-font);
+    font-size: var(--font-size-text);
+    font-style: normal;
+}
+p, a, small, span {
+ color: var(--text-color);
+ font-family: var(--principal-font);
+ font-size: var(--font-size-text);   
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-size: var(--font-size-title);
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.html {
+    color: var(--html-color);
+}
+.css {
+    color: var(--css-color);
+}
+.js {
+    color: var(--js-color);
+}
+.react {
+    color: var(--react-color);
+}
+.angular {
+    color: var(--angular-color);
+}
+.facebook {
+    color: var(--facebook-color);
+}
+.twitter {
+    color: var(--twitter-color);
+}
+.linkedin {
+    color: var(--linkedin-color);
+}
+.instagram {
+    color: var(--instagram-color);
+}
+.telegram {
+    color: var(--telegram-color);
+}
+.github {
+    color: var(--github-color);
+}
+.whatsapp {
+    color: var(--whatsapp-color);
+}
+
+/*==========Button=========*/
+.btn {
+    padding: 1rem;
+    border-radius: .3rem;
+    border: 0;
+}
+.btn:focus {
+    outline: 0;
+}
+@keyframes push {
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.btn-default {
+    color: var(--white-color);
+    background: var(--black-color);
+    letter-spacing: .2rem;
+    vertical-align: middle;
+    display: inline-block;
+    transform: perspective(1px) translateZ(0);
+    cursor: pointer;
+}
+.btn-default:hover {
+    animation: push;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+/*==========Scrol Down==========*/
+.scroll-down {
+    left: 0;
+    width: 100%;
+    margin: .4rem auto;
+}
+.nouse-wrapper {
+    display: block;
+    padding: auto;
+    max-width: 100%;
+    text-align: center;
+}
+@keyframes ani-mouse {
+    0% {
+        top: 0%;
+    }
+    15% {
+        top: 30%;
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        text-outline: 20% 0;
+    }
+}
+.mouse {
+    border: 2px solid var(--black-color);
+    display: block;
+    height: 1.75rem;
+    width: 1.25rem;
+    margin: auto;
+    border-radius: 1.25rem;
+    position: relative;
+}
+.mouse i {
+    color: var(--black-color);
+    position: absolute;
+    top: .5rem;
+    left: 7%;
+    display: block;
+    animation: ani-mouse 2s linear infinite;
+}
+
+/*==========Header==========*/
+.header {
+    width: 100vw;
+    height: 3.5rem;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 0 1rem var(--shadow-color);
+}
+.header .nav {
+    width: 92%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__logo a {
+    font-family: var(--title-font);
+    color: var(--title-color);
+    font-size: 1.5rem;
+    font-weight: 900;
+    transition: all .5s ease;
+}
+.nav__logo a span {
+    font-family: var(--title-font);
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+.nav__logo a:hover {
+    color: var(--primary-color);
+}
+.header .nav .nav__menu .nav__list .nav__item a {
+    color: var(--black-color);
+    font-weight: 500;
+    font-size: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: .5s ease;
+}
+.header .nav .nav__menu .nav__list .nav__item a i {
+    letter-spacing: .2rem;
+}
+
+/*==========Media Query Navbar Tablet / Mobile==========*/
+@media (min-width: 0px) and (max-width: 1024px) {
+    .toggle-btn {
+        color: var(--black-color);
+        font-size: 1.7rem;
+        cursor: pointer;
+    }
+    #close-toggle {
+        display: none;
+    }
+    .nav__menu {
+        position: fixed;
+        top: 3.5rem;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        box-shadow: .5rem .5rem 1rem var(--shadow-color);
+        transition: all .5s ease;
+    }
+    .nav__list {
+        margin-left: 1rem;
+    }
+    .nav__item {
+        margin: 2rem auto;
+    }
+
+}
+
+/*==========Media Query Navbar Desktop / Big Screen==========*/
+@media (min-width: 1024px) {
+    .toggle-btn {
+        display: none;
+    }
+    .header .nav .nav__menu .nav__list {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        height: 100%;
+    }
+    .header .nav .nav__menu .nav__list .nav__item a:hover {
+        color: var(--primary-color);
+        transition: all .3s ease;
+    }
+
+}
+
+/*==========JavaScript==========*/
+.show {
+    left: 0;
+}
+.scroll-header {
+    background: var(--white-color);
+}
+
+/*==========Main==========*/
+.main {
+    margin-top: calc(+3.5rem);
+    height: 100vh;
+}
+.main .container {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 2rem;
+}
+
+/*==========Home==========*/
+.home .home-content {
+    display: flex;
+}
+.home .home-content article {
+    width: 70%;
+    padding: 2rem;
+}
+.home .home-content article h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+.home .home-content article h1 span {
+    font-size: 3.7rem;
+    line-height: 3rem;
+}
+.home .home-content article h2 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin: -1.3rem 0 1rem 0;
+}
+.home .home-content article p {
+    margin-bottom: 1rem;
+    letter-spacing: .1rem;
+}
+.home .home-content article .article-language {
+    font-size: 1.5rem;
+    margin: 1rem auto;
+}
+.home .home-content article .article-language i {
+    color: var(--black-color);
+    letter-spacing: 2rem;
+}
+.home .home-content .image img {
+    mix-blend-mode: luminosity;
+}
+.home .home-content .social {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.home .home-content .social i {
+    position: relative;
+    font-size: 1.5rem;
+    transition: all .3s ease;
+    top: 7rem;
+    color: var(--black-color);
+}
+.home .home-content .social i:hover {
+    color: var(--primary-color);
+}
+
+
+/*==========Media Query Tablet==========*/
+@media (max-width: 1024px) {
+    .main .container {
+        width: 100%;
+        padding: 1rem;
+    }
+    .home .home-content {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .home .home-content article {
+        width: 100%;
+        text-align: center;
+    }
+    .home .home-content article h1 {
+        font-size: 1.5rem;
+    }
+    .home .home-content article h1 span {
+        font-size: 3rem;
+    }
+    .home .home-content article h2 {
+        font-size: 1rem;
+    }
+    .home .home-content article p {
+        text-align: left;
+    }
+    .home .home-content .image img {
+        width: 80%;
+    }
+
+}
+
+/*==========Media Query Mobile==========*/
+@media (max-width: 768px) {
+    .main .container {
+        width: 100%;
+        padding: 0;
+        margin-top: -12rem;
+    }
+    .home .home-content article {
+        padding: 1rem;
+    }
+    .home .home-content article h1 {
+        text-align: left;
+        font-size: 1.2rem;
+    }
+    .home .home-content article h1 span {
+        font-size: 2.7rem;
+    }
+    .home .home-content article h2 {
+        text-align: left;
+        font-size: 1.2rem;
+    }
+    .home .home-content .image {
+        margin-top: 12rem;
+    }
+    .home .home-content .image img {
+        width: 90%;
+        margin-bottom: 5rem;
+    }
+    .home .home-content .social {
+        position: absolute;
+        flex-direction: row;
+        top: 19rem;
+    }
+}
+
