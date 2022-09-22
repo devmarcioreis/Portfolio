@@ -365,6 +365,7 @@ img {
     transform:  scale(1.1);
     transition: all .3s ease-in-out;
     box-shadow: -.4rem .7rem var(--black-color);
+    background: var(--white-color);
 }
 .about .about-content aside h2 {
     margin-bottom: 1rem;
@@ -471,6 +472,7 @@ img {
     }
     .about .about-content aside {
         background: var(--white-color);
+        box-shadow: -.4rem .7rem var(--black-color);
     }
     .about .about-content aside:hover {
         transform:  scale(1);
