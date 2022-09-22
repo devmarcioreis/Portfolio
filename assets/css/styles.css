@@ -33,6 +33,7 @@
     --github-color: #000;
     --whatsapp-color: #2BAF3E;
     --transparent-color: rgba(0, 0, 0, 0);
+    --green-color: #2B7A0B;
 }
 
 /*==========Reset CSS==========*/
@@ -347,6 +348,93 @@ img {
     color: var(--primary-color);
 }
 
+/*==========About==========*/
+.about .about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 4rem auto;
+}
+.about .about-content aside {
+    width: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--black-color);
+    transition: all .3s ease-in;
+}
+.about .about-content aside:hover {
+    transform:  scale(1.1);
+    transition: all .3s ease-in-out;
+    box-shadow: -.4rem .7rem var(--black-color);
+}
+.about .about-content aside h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+.about .about-content aside p {
+    margin-bottom: 1rem;
+}
+.about .about-content aside .btn {
+    padding: .5rem;
+    background: var(--black-color);
+    color: var(--white-color);
+}
+.about .about-content .skills {
+    width: 100%;
+    padding: 1.5rem;
+}
+.about .about-content .skills .skill-item {
+    max-width: 100%;
+}
+.about .about-content .skills .skill-item h4 {
+    text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: .4rem;
+}
+.about .about-content .skills .skill-item .progress {
+    height: 0.65rem;
+    border-radius: 1rem;
+    width: 100%;
+    position: relative;
+    background: var(--white-color);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.185);
+}
+.about .about-content .skills .skill-item:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+.about .about-content .skills .skill-item .progress .progress-in {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 1rem;
+}
+.style-html {
+    width: 91%;
+    background: linear-gradient(90deg, var(--background-color), var(--html-color));
+}
+.style-css {
+    width: 87%;
+    background: linear-gradient(90deg, var(--background-color), var(--css-color));
+}
+.style-js {
+    width: 72%;
+    background: linear-gradient(90deg, var(--background-color), var(--js-color));
+}
+.style-react {
+    width: 34%;
+    background: linear-gradient(90deg, var(--background-color), var(--react-color));
+}
+.style-angular {
+    width: 25%;
+    background: linear-gradient(90deg, var(--background-color), var(--angular-color));
+}
+.about .about-content .skills .skill-item .progress .progress-in .skill-percent {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    color: var(--text-color);
+}
+
 
 /*==========Media Query Tablet==========*/
 @media (max-width: 1024px) {
@@ -376,6 +464,16 @@ img {
     }
     .home .home-content .image img {
         width: 80%;
+    }
+    .about .about-content {
+        padding: 2rem;
+        flex-direction: column;
+    }
+    .about .about-content aside {
+        background: var(--white-color);
+    }
+    .about .about-content aside:hover {
+        transform:  scale(1);
     }
 
 }
@@ -412,6 +510,9 @@ img {
         position: absolute;
         flex-direction: row;
         top: 19rem;
+    }
+    .about .about-content {
+        padding: 1rem;
     }
 }
 
