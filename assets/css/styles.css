@@ -495,6 +495,78 @@ img {
 }
 
 /*==========Portfolio==========*/
+.portfolio .portfolio-content {
+    margin: 7rem auto;
+}
+.portfolio .portfolio-content .portfolio-text h2 {
+    color: var(--primary-color);
+}
+.portfolio .portfolio-content .portfolio-text p {
+    margin-bottom: 1rem;
+}
+.portfolio .portfolio-content .portfolio-nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin: .5rem 0;
+    cursor: pointer;
+}
+.portfolio .portfolio-content .portfolio-nav .portfolio-item {
+    font-weight: bold;
+}
+.portfolio .portfolio-content .portfolio-nav .portfolio-item:hover {
+    color: var(--primary-color);
+}
+.portfolio .portfolio-content .portfolio-cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.portfolio .portfolio-content .portfolio-cards .card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--black-color);
+    width: 17rem;
+    height: 25rem;
+    background: var(--white-color);
+    border-radius: .3rem;
+    padding: 1rem;
+    margin: 1rem;
+    transition: all .5s ease-in;
+}
+.portfolio .portfolio-content .portfolio-cards .card {
+    box-shadow: -.3rem -.4rem var(--black-color);
+}
+.portfolio .portfolio-content .portfolio-cards .image {
+    width: 15rem;
+    height: 15rem;
+}
+.portfolio .portfolio-content .portfolio-cards .image img {
+    width: 100%;
+    border-radius: 2rem;
+}
+.portfolio .portfolio-content .portfolio-cards .card .card-content {
+    text-align: center;
+}
+.portfolio .portfolio-content .portfolio-cards .card .card-content .card-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 0 0 0 1rem;
+}
+.portfolio .portfolio-content .portfolio-cards .card .card-content .btn {
+    margin: 1rem;
+}
+.portfolio .portfolio-content .porfolio-info {
+    text-align: center;
+}
+.portfolio .portfolio-content .porfolio-info {
+    margin: 2rem 0;
+}
+.portfolio .portfolio-content .porfolio-info i {
+    font-size: 1.5rem;
+}
+
 
 
 /*==========Media Query Tablet==========*/
@@ -549,6 +621,15 @@ img {
     .services .services-content .services-cards .card:hover {
         transform: translateY(0);
     }
+    .portfolio .portfolio-content .portfolio-cards {
+        padding: 0 1rem;
+    }
+    .portfolio .portfolio-content .portfolio-cards .card:hover {
+        transform: scale(1);
+    }
+    .portfolio .portfolio-content .portfolio-cards .card {
+        width: 20rem;
+    }
 
 }
 
@@ -589,7 +670,12 @@ img {
         padding: 1rem;
     }
     .services .services-content .services-cards {
-        padding: 1rem 1rem 4rem 1rem;
+        padding: 1rem 1rem 2rem 1rem;
     }
+    .portfolio .portfolio-content {
+        padding: 1rem 1rem 2rem 1rem;
+    }
+    
+
 }
 
