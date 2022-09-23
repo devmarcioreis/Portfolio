@@ -351,7 +351,7 @@ img {
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin: 7rem auto;
+    margin: 5rem auto;
 }
 .about .about-content aside {
     width: 100%;
@@ -436,7 +436,7 @@ img {
 
 /*==========Services==========*/
 .services .services-content {
-    margin: 7rem auto;
+    margin: 5rem auto;
 }
 .services .services-content .services-description {
     text-align: center;
@@ -449,7 +449,7 @@ img {
 }
 .services .services-content .services-cards {
     display: flex;
-    align-items: baseline;
+    align-items: stretch;
     justify-content: center;
     gap: 1rem;
 }
@@ -497,19 +497,20 @@ img {
 
 /*==========Portfolio==========*/
 .portfolio .portfolio-content {
-    margin: 5rem auto;
+    margin: auto;
 }
 .portfolio .portfolio-content .portfolio-text h2 {
     color: var(--primary-color);
+    margin: 0 2rem;
 }
 .portfolio .portfolio-content .portfolio-text p {
-    margin-bottom: 1rem;
+    margin: 0 2rem;
 }
 .portfolio .portfolio-content .portfolio-nav {
     display: flex;
     justify-content: flex-start;
     gap: 1.5rem;
-    margin: .5rem 0;
+    margin: 1rem 2rem;
     cursor: pointer;
 }
 .portfolio .portfolio-content .portfolio-nav .portfolio-item {
@@ -521,7 +522,7 @@ img {
 .portfolio .portfolio-content .portfolio-cards {
     display: flex;
     flex-wrap: wrap;
-    padding: 1rem 4rem;
+    justify-content: center;
 }
 .portfolio .portfolio-content .portfolio-cards .card {
     display: flex;
@@ -562,7 +563,7 @@ img {
     text-align: center;
 }
 .portfolio .portfolio-content .porfolio-info {
-    margin: 2rem 0;
+    margin: 2rem;
 }
 .portfolio .portfolio-content .porfolio-info i {
     font-size: 1.5rem;
@@ -770,7 +771,7 @@ img {
         top: 19rem;
     }
     .about .about-content {
-        padding: 1rem;
+        padding: 2rem;
     }
     .services .services-content .services-cards {
         padding: 0 2rem;
