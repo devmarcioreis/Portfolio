@@ -247,6 +247,7 @@ img {
         left: -100%;
         width: 100%;
         height: 100vh;
+        background: #fff0e5dc;
         box-shadow: .5rem .5rem 1rem var(--shadow-color);
         transition: all .5s ease;
     }
@@ -359,7 +360,7 @@ img {
     transition: all .3s ease-in;
 }
 .about .about-content aside:hover {
-    transform:  scale(1.1);
+    transform:  scale(1.01);
     transition: all .3s ease-in-out;
     box-shadow: -.4rem .7rem var(--black-color);
     background: var(--white-color );
@@ -496,7 +497,7 @@ img {
 
 /*==========Portfolio==========*/
 .portfolio .portfolio-content {
-    margin: 7rem auto;
+    margin: 5rem auto;
 }
 .portfolio .portfolio-content .portfolio-text h2 {
     color: var(--primary-color);
@@ -520,17 +521,16 @@ img {
 .portfolio .portfolio-content .portfolio-cards {
     display: flex;
     flex-wrap: wrap;
-    padding: 1rem;
+    padding: 1rem 4rem;
 }
 .portfolio .portfolio-content .portfolio-cards .card {
     display: flex;
     align-items: center;
     flex-direction: column;
     border: 1px solid var(--black-color);
-    width: 17rem;
-    height: 25rem;
+    width: 16rem;
+    height: 22rem;
     background: var(--white-color);
-    border-radius: .3rem;
     padding: 1rem;
     margin: 1rem;
     transition: all .5s ease-in;
@@ -538,24 +538,25 @@ img {
 .portfolio .portfolio-content .portfolio-cards .card {
     box-shadow: -.3rem -.4rem var(--black-color);
 }
-.portfolio .portfolio-content .portfolio-cards .image {
-    width: 15rem;
-    height: 15rem;
+.portfolio .portfolio-content .portfolio-cards .card.image {
+    width: 10rem;
+    height: 10rem;
 }
-.portfolio .portfolio-content .portfolio-cards .image img {
+.portfolio .portfolio-content .portfolio-cards .card .image img {
     width: 100%;
     border-radius: 2rem;
+    margin-bottom: .5rem;
 }
 .portfolio .portfolio-content .portfolio-cards .card .card-content {
     text-align: center;
 }
-.portfolio .portfolio-content .portfolio-cards .card .card-content .card-title {
-    font-size: 1.7rem;
-    font-weight: bold;
-    margin: 0 0 0 1rem;
+.portfolio .portfolio-content .portfolio-cards .card .card-content .card-name {
+    font-size: 1rem;
 }
 .portfolio .portfolio-content .portfolio-cards .card .card-content .btn {
-    margin: 1rem;
+    position: relative;
+    padding: .5rem;
+    top: 1rem;
 }
 .portfolio .portfolio-content .porfolio-info {
     text-align: center;
@@ -567,6 +568,86 @@ img {
     font-size: 1.5rem;
 }
 
+/*==========Footer==========*/
+.footer {
+    padding: 2rem 0 1rem 0;
+    box-shadow: 0 0 1rem var(--shadow-color);
+}
+.footer .footer-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+}
+.footer .footer-cards .footer-card {
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+}
+.footer .footer-cards .footer-card .footer-box {
+    margin-bottom: 2rem;
+}
+.footer .footer-cards .footer-card .footer-box h4 {
+    text-align: center;
+    font-size: 1.2rem;
+}
+.footer .footer-cards .footer-card .footer-box p {
+    margin-bottom: .5rem;
+}
+.footer .footer-cards .footer-card .footer-box i {
+    font-size: 1.2rem;
+    letter-spacing: 2rem;
+    color: var(--black-color);
+    margin-left: .7rem;
+}
+.footer .footer-cards .footer-card .footer-box a {
+    font-family: var(--title-font);
+    color: var(--title-color);
+    font-size: 1.2rem;
+    font-weight: 900;
+    transition: all .5s ease;
+    margin-left: 1.4rem;
+}
+.footer .footer-cards .footer-card .footer-box a span {
+    font-family: var(--title-font);
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+.footer .footer-cards .footer-card .footer-box a:hover {
+    color: var(--primary-color);
+}
+.footer .footer-cards .footer-social {
+    text-align: center;
+    margin-top: -1rem;
+}
+.footer .footer-cards .footer-social ul {
+    display: flex;
+    margin-left: 2rem;
+}
+.footer .footer-cards .footer-social p {
+    margin-bottom: .3rem;
+}
+.footer .footer-cards .footer-social i {
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+    transition: all .5s ease;
+}
+.footer .footer-cards .footer-social i:hover {
+    color: var(--black-color);
+}
+.footer .footer-cards .footer-social p {
+    margin: 1rem 0 0 1.1rem;
+}
+.footer .footer-cards .footer-social p i {
+    font-size: 1rem;
+    letter-spacing: .1rem;
+}
+.footer .footer-copy {
+    text-align: center;
+    margin-top: 2rem;
+}
 
 
 /*==========Media Query Tablet==========*/
@@ -622,15 +703,37 @@ img {
         transform: translateY(0);
     }
     .portfolio .portfolio-content .portfolio-cards {
-        padding: 0 1rem;
+        padding: 1rem 3rem;
+    }
+    .portfolio .portfolio-content .portfolio-cards .card {
+        width: 18rem;
+        height: 23rem;
     }
     .portfolio .portfolio-content .portfolio-cards .card:hover {
         transform: scale(1);
     }
-    .portfolio .portfolio-content .portfolio-cards .card {
-        width: 20rem;
+    .footer {
+        text-align: center;
+        padding: 2rem 0;
     }
-
+    .footer .footer-cards {
+       flex-direction: column;
+    }
+    .footer .footer-cards .footer-card {
+        flex-direction: row;
+        gap: .1rem;
+    }
+    .footer .footer-cards .footer-card .footer-box {
+        margin-left: .6rem;
+    }
+    .footer .footer-cards .footer-card .footer-box a {
+        margin-right: 2rem;
+    }
+    .footer .footer-cards .footer-card .footer-box i {
+        letter-spacing: .5rem;
+        margin-left: 0;
+    }
+    
 }
 
 /*==========Media Query Mobile==========*/
@@ -670,12 +773,18 @@ img {
         padding: 1rem;
     }
     .services .services-content .services-cards {
-        padding: 1rem 1rem 2rem 1rem;
+        padding: 0 2rem;
     }
-    .portfolio .portfolio-content {
-        padding: 1rem 1rem 2rem 1rem;
+    .portfolio .portfolio-content .portfolio-cards {
+        padding: 0 1.5rem;
     }
-    
+    .portfolio .portfolio-content .portfolio-cards .card {
+        width: 30rem;
+        height: 23.5rem;
+    }
+    .footer .footer-cards .footer-card {
+        flex-direction: column;
+    }
 
 }
 
