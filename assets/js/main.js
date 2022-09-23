@@ -41,8 +41,31 @@ window.onscroll = () => {
 }
 
 
+//Scroll page
+const headerNav = document.querySelectorAll('.nav__menu ul li a[href^="#"]');
 
+headerNav.forEach(i => {
+    i.addEventListener('click', scrollOnClick);
+});
 
+function scrollOnClick(e) {
+    e.preventDefault();
+    const to = scrollToHref(e.target) -60;
+
+    scrollToPosition(to);
+};
+
+function scrollToPosition(to) {
+    window.scroll({
+        top: to,
+        behavior: "smooth",
+    });
+};
+
+function scrollToHref(element) {
+    const id = element.getAttribute('href');
+    return document.querySelector(id).offsetTop;
+};
 
 
 
