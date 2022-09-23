@@ -329,9 +329,6 @@ img {
     color: var(--black-color);
     letter-spacing: 2rem;
 }
-.home .home-content .image img {
-    mix-blend-mode: luminosity;
-}
 .home .home-content .social {
     display: flex;
     flex-direction: column;
@@ -353,7 +350,7 @@ img {
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin: 4rem auto;
+    margin: 7rem auto;
 }
 .about .about-content aside {
     width: 100%;
@@ -365,7 +362,7 @@ img {
     transform:  scale(1.1);
     transition: all .3s ease-in-out;
     box-shadow: -.4rem .7rem var(--black-color);
-    background: var(--white-color);
+    background: var(--white-color );
 }
 .about .about-content aside h2 {
     margin-bottom: 1rem;
@@ -436,6 +433,67 @@ img {
     color: var(--text-color);
 }
 
+/*==========Services==========*/
+.services .services-content {
+    margin: 7rem auto;
+}
+.services .services-content .services-description {
+    text-align: center;
+}
+.services .services-content .services-description h2 {
+    color: var(--primary-color);
+}
+.services .services-content .services-description p {
+    margin-bottom: 1rem;
+}
+.services .services-content .services-cards {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 1rem;
+}
+.services .services-content .services-cards .card {
+    width: 30rem;
+    margin-top: 1rem;
+    transition: all .3s ease;
+}
+.services .services-content .services-cards .card:hover {
+    transform: translateY(-0.625rem);
+}
+.services .services-content .services-cards .card:nth-child(odd) {
+    margin-top: 1.5rem;
+}
+.services .services-content .services-cards .card:nth-child(1) {
+    padding-left: 15px;
+}
+.services .services-content .services-cards .card:nth-child(3) {
+    padding-right: 15px;
+}
+.services .services-content .services-cards .card .card-item .react-icon, .js-icon, .angular-icon {
+    font-size: 4rem;
+}
+.services .services-content .services-cards .card .card-item .react-icon {
+    color: var(--react-color);
+}
+.services .services-content .services-cards .card .card-item .js-icon {
+    color: var(--js-color);
+}
+.services .services-content .services-cards .card .card-item .angular-icon {
+    color: var(--angular-color);
+}
+.services .services-content .services-cards .card .card-item {
+    padding: 1.9rem 0.95rem;
+    text-align: center;
+    border-radius: 1.25rem;
+}
+.services .services-content .services-cards .card .card-item h3.lang {
+    margin: .75rem 0;
+    font-size: 1.5rem;
+}
+.services .services-content .services-cards .card .card-item p {
+    margin-bottom: 1rem;
+}
+
 
 /*==========Media Query Tablet==========*/
 @media (max-width: 1024px) {
@@ -477,6 +535,18 @@ img {
     .about .about-content aside:hover {
         transform:  scale(1);
     }
+    .services .services-content .services-cards {
+        flex-direction: column;
+        padding: 0 4rem;
+    }
+    .services .services-content .services-cards .card {
+        width: auto;
+        border: 2px solid var(--black-color);
+        box-shadow: -.4rem .7rem var(--black-color);
+    }
+    .services .services-content .services-cards .card:hover {
+        transform: translateY(0);
+    }
 
 }
 
@@ -515,6 +585,9 @@ img {
     }
     .about .about-content {
         padding: 1rem;
+    }
+    .services .services-content .services-cards {
+        padding: 1rem 1rem 4rem 1rem;
     }
 }
 
