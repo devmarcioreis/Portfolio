@@ -1,0 +1,295 @@
+@charset "UTF-9";
+
+/*==========Google Fonts - Poppins==========*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/*==========Reset CSS==========*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+/*==========Body==========*/
+body {
+    background: #FFF0E5;
+}
+a {
+    color: #333;
+}
+
+/*==========Curriculo==========*/
+.curriculo {
+    background: #fff;
+    margin: 5rem auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.397);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+.curriculo .top {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 20px;
+}
+.curriculo .top .profile .box {
+    position: relative;
+    width: 80%;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.curriculo .top .profile .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile-text {
+    text-align: center;
+}
+.top .profile .home {
+    color: #2196F3;
+}
+.profile-text h3 {
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+    font-weight: 600;
+    color: #333;
+    margin-top: 4rem;
+}
+.curriculo .top .profile-text h3  span {
+    position: relative;
+    font-size: 0.5em;
+    font-weight: 300;
+    top: -15px;
+}
+.curriculo .top .profile-text h3 a {
+    font-size: .4em;
+    color: #2196F3;
+}
+.curriculo .content-box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 40px 40px;
+}
+.curriculo .content-box .home a {
+    color: #2196F3;
+}
+.curriculo .content-box  h3 {
+    border-left: 4px solid #2196F3;
+    padding-left: 10px;
+    line-height: 1em;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+.curriculo .content-box ul {
+    position: relative;
+    margin: 10px 0;
+}
+.curriculo .content-box ul li {
+    margin: 25px 0;
+    line-height: 1em;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+}
+.curriculo .content-box ul li .icon {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: #2196F3;
+}
+.curriculo .content-box ul.education li {
+    flex-direction: column;
+    margin: 25px 0;
+}
+.curriculo .content-box ul.education li h5 {
+    color: #2196F3;
+}
+.curriculo .content-box ul.education li h4 {
+    color: #000;
+    font-weight: 500;
+    margin: 5px 0;
+}
+.curriculo .content-box ul.education li h6 {
+    color: #333;
+    font-weight: 300;
+    font-size: 1em;
+}
+.curriculo .content-box ul.language li {
+    flex-direction: column;
+}
+.curriculo .content-box ul.language li span {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+.curriculo .content-box ul.language li .percent {
+    position: relative;
+    width: 100%;
+    background: #e3e3e3;
+    height: 6px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    overflow: hidden;
+}
+.curriculo .content-box ul.language li .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60%;
+    background: #2196F3;
+}
+.curriculo .content-box ul.interest {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.curriculo .content-box ul.interest li {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    margin: 20px 0;
+}
+.curriculo .content-box ul.interest li .icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #2196F3;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.curriculo .content-box ul.interest li .icon i {
+    color: #fff;
+    margin-right: 0;
+}
+.curriculo .content-box .right {
+    padding-left: 40px;
+}
+.curriculo .content-box .right .about p {
+    font-weight: 300;
+}
+.curriculo .content-box .right .about .box {
+    display: flex;
+    margin: 20px 0;
+}
+.curriculo .content-box .right .about .box .year-company {
+    min-width: 150px;
+    margin-bottom: 10px;
+}
+.curriculo .content-box .right .about .box .year-company h5 {
+    color: #333;
+    font-weight: 600;
+}
+.curriculo .content-box .right .about .box .year-company h5:nth-child(1) {
+    color: #2196F3;
+}
+.curriculo .content-box .right .about .box .text h4 {
+    color: #2196F3;
+    font-size: 16px;
+    margin: 0;
+}
+.curriculo .content-box .about.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.curriculo .content-box .about.skills .box h4 {
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: .8em;
+}
+.curriculo .content-box .about.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #e3e3e3;
+}
+.curriculo .content-box .about.skills .box .percent .html {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #E44D25;
+    width: 89%;
+}
+.curriculo .content-box .about.skills .box .percent .css {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #1E4CE5;
+    width: 81%;
+}
+.curriculo .content-box .about.skills .box .percent .js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #F7E018;
+    width: 81%;
+}
+.curriculo .content-box .about.skills .box .percent .react {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #00D8FF;
+    width: 20%;
+}
+.curriculo .content-box .about.skills .box .percent .angular {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #D6002F;
+    width: 12%;
+}
+
+
+/*==========Media Query==========*/
+@media (max-width: 768px) {
+    .curriculo {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .curriculo .top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    .curriculo .top .profile .box {
+        margin: auto;
+        width: 40%;
+    }
+    
+    .curriculo .content-box {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 10px 20px;
+        place-items: center;
+    }
+
+}
