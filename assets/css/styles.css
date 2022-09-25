@@ -9,7 +9,7 @@
 /*==========Root==========*/
 :root {
     --background-color: #FFF0E5;
-    --primary-color: #050405; 
+    --primary-color: #3A10E5; 
     --white-color: #FFFFFF;
     --black-color: #000000;
     --btn-color: #5131F3;
@@ -247,7 +247,8 @@ img {
         left: -100%;
         width: 100%;
         height: 100vh;
-        background: #fff0e5dc;
+        background: var(--background-color);
+        opacity: 0.9;
         box-shadow: .5rem .5rem 1rem var(--shadow-color);
         transition: all .5s ease;
     }
@@ -307,7 +308,6 @@ img {
 }
 .home .home-content article h1 {
     font-size: 2rem;
-    color: var(--primary-color);
 }
 .home .home-content article h1 span {
     font-size: 3.7rem;
@@ -502,77 +502,82 @@ img {
 }
 
 /*==========Portfolio==========*/
-.portfolio .portfolio-content {
-    margin: auto;
+.portfolio .portfolio-text {
+    margin: 2rem 0;
 }
-.portfolio .portfolio-content .portfolio-text h2 {
+.portfolio .portfolio-text h2 {
     color: var(--primary-color);
-    margin: 0 2rem;
 }
-.portfolio .portfolio-content .portfolio-text p {
-    margin: 0 2rem;
-}
-.portfolio .portfolio-content .portfolio-nav {
-    display: flex;
-    justify-content: flex-start;
-    gap: 1.5rem;
-    margin: 1rem 2rem;
-    cursor: pointer;
-}
-.portfolio .portfolio-content .portfolio-nav .portfolio-item {
+.portfolio .portfolio-nav {
     font-weight: bold;
+    cursor: pointer;
+    margin: .5rem 0;
 }
-.portfolio .portfolio-content .portfolio-nav .portfolio-item:hover {
+.portfolio .portfolio-nav .portfolio-item {
+    margin-right: 1rem;
+}
+.portfolio .portfolio-nav .portfolio-item:hover {
     color: var(--primary-color);
 }
-.portfolio .portfolio-content .portfolio-cards {
+.portfolio .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.portfolio .portfolio-content .portfolio-cards .card {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid var(--black-color);
-    width: 16rem;
-    height: 22rem;
-    background: var(--white-color);
-    padding: 1rem;
+.portfolio .cards-container .cards-item {
     margin: 1rem;
-    transition: all .5s ease-in;
 }
-.portfolio .portfolio-content .portfolio-cards .card {
-    box-shadow: -.3rem -.4rem var(--black-color);
-}
-.portfolio .portfolio-content .portfolio-cards .card.image {
-    width: 10rem;
-    height: 10rem;
-}
-.portfolio .portfolio-content .portfolio-cards .card .image img {
-    width: 100%;
-    border-radius: 2rem;
-    margin-bottom: .5rem;
-}
-.portfolio .portfolio-content .portfolio-cards .card .card-content {
-    text-align: center;
-}
-.portfolio .portfolio-content .portfolio-cards .card .card-content .card-name {
-    font-size: 1rem;
-}
-.portfolio .portfolio-content .portfolio-cards .card .card-content .btn {
+.portfolio .cards-container .cards-item .cards-item-inner {
     position: relative;
-    padding: .5rem;
-    top: 1rem;
+    background: var(--white-color);
+    width: 17rem;
+    height: 22rem;
+    border-radius: 1.8rem;
 }
-.portfolio .portfolio-content .porfolio-info {
+.portfolio .cards-container .cards-item .cards-item-inner .mask {
+    background: var(--background-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+    opacity: 0;
+    border-radius: 1.8rem;
+}
+.portfolio .cards-container .cards-item .cards-item-inner:hover .mask{
+    opacity: 1;
+}
+.portfolio .cards-container .cards-item .cards-item-inner .cards-image img {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+.portfolio .cards-container .cards-item .cards-info {
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
     text-align: center;
 }
-.portfolio .portfolio-content .porfolio-info {
-    margin: 2rem;
+.portfolio .cards-container .cards-item .cards-info p {
+    color: var(--text-color);
+    margin: 1rem;
 }
-.portfolio .portfolio-content .porfolio-info i {
-    font-size: 1.5rem;
+.portfolio .cards-container .cards-item .cards-info i {
+    letter-spacing: .4rem;
+}
+.cards-item .btn {
+    position: absolute;
+    top: 9rem;
+    left: 3.5rem;
+    transition: .3s ease;
+    opacity: 0;
+    padding: .5rem;
+}
+.cards-item-inner:hover .btn, .cards-item-inner:hover .info {
+    opacity: 1;
+}
+.portfolio .portfolio-text-info {
+    text-align: center;
+    margin: 2rem 0;
 }
 
 /*==========Footer==========*/
@@ -709,16 +714,6 @@ img {
     .services .services-content .services-cards .card:hover {
         transform: translateY(0);
     }
-    .portfolio .portfolio-content .portfolio-cards {
-        padding: 1rem 3rem;
-    }
-    .portfolio .portfolio-content .portfolio-cards .card {
-        width: 18rem;
-        height: 23rem;
-    }
-    .portfolio .portfolio-content .portfolio-cards .card:hover {
-        transform: scale(1);
-    }
     .footer {
         text-align: center;
         padding: 2rem 0;
@@ -782,12 +777,14 @@ img {
     .services .services-content .services-cards {
         padding: 0 2rem;
     }
-    .portfolio .portfolio-content .portfolio-cards {
-        padding: 0 1.5rem;
+    .portfolio .portfolio-text {
+        margin: 2rem;
     }
-    .portfolio .portfolio-content .portfolio-cards .card {
-        width: 30rem;
-        height: 23.5rem;
+    .portfolio .portfolio-nav {
+        padding: 0 2rem;
+    }
+    .portfolio .portfolio-text-info {
+        margin: 1rem 0 4rem 0;
     }
     .footer .footer-cards .footer-card {
         flex-direction: column;
